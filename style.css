@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+:root {
+    --orange: hsl(26, 100%, 55%);
+    --lt-orange: hsl(25, 100%, 94%);
+    --dk-blue: hsl(220, 13%, 13%);
+    --dk-gray-blue: hsl(219, 9%, 45%);
+    --gray-blue: hsl(220, 14%, 75%);
+    --lt-gray-blue: hsl(223, 64%, 98%);
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* nav bar  */
+  
+.navbar {
+  background-color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ 
+.top-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  padding: 15px 0;
+}
+    
+.avatar {
+  height: 25px;
+  padding-left: 20px;
+}
+
+.left {
+  display: flex;
+}
+
+.navbar-list {
+  font-weight: 700;
+  position: fixed;
+  z-index: 3;
+  overflow-x: hidden;
+  height: 100vh;
+  width: 0;
+  top:0;
+  left: 0;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  transition: 0.5s ease-in-out;
+}
+  
+.navbar-list.active {
+  display: flex;
+  width: 255px;
+  overflow-x: hidden;
+}
+  
+.navbar-list a {
+  color: #464343;
+  padding: 10px 30px;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700px;
+}
+    
+.navbar-list  a:hover {
+  text-decoration:underline;
+  color: rgb(57, 3, 158);
+}
+
+/* animated xs */
+.toggle {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  z-index: 5;
+  transition: all .5s ease-in-out;
+}
+
+.toggle__burger{
+  width: 20px;
+  height: 3px;
+  background: rgb(102, 102, 102);
+  transition: all .5s ease-in-out;
+}
+
+.toggle__burger::before,
+.toggle__burger::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 3px;
+  background: rgb(102, 102, 102);
+  transition: all .5s ease-in-out;
+}
+
+.toggle__burger::before {
+  transform: translateY(-8px);
+}
+
+.toggle__burger::after {
+  transform: translateY(8px);
+}
+
+/* ANIMATION */
+.toggle.active .toggle__burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+.toggle.active .toggle__burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+.toggle.active .toggle__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+
+.logo {
+  padding-left: 20px;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+main {
+    width: 90%;
+    margin: 20px auto 100px;
+}
+   
+h3 {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px; 
+    color: var(--orange);
+    padding-bottom: 20px;
+}
+
+h6 {
+    font-size: 28px;
+}
+
+p {
+    padding: 20px 0;
+    color: var(--dk-gray-blue);
+    font-size: 16px;
+}
+
+.prices {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.total_price {
+    display: flex;
+    align-items: center;
+}
+
+.discount {
+    margin-left: 30px;
+    color: var(--orange);
+    padding: 4px 8px;
+    background-color: var(--lt-orange);
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.oldprice {
+    color: var(--dk-gray-blue);
+    font-weight: 700;
+    text-decoration: line-through;
+}
+
+.amount {
+    background-color: var(--lt-gray-blue);
+    display: flex;
+    margin: 20px 0;
+    padding: 0 30px;
+    justify-content: space-between;
+    align-items:baseline;
+    border-radius: 10px;
+}
+
+.amount p {
+    color: black;
+    font-weight: 700;
+}
+
+button {
+    width: 100%;
+    background-color: var(--orange);
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    padding: 20px;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.cart-white {
+    filter:brightness(5);
+    padding-right: 20px;
+}
+
+.attribution {
+  font-size: 11px; 
+  text-align: center;
+  padding-right: 40px;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (min-width:900px){
+  .toggle {
+    display: none;
+  }
+  
+  .navbar-list {
+    position:relative;
+    padding-top: 0;
+    height: 20px;
+    flex-direction: row;
+    overflow-x: visible;
+  }
+
+  .navbar-list a {
+    padding: 0 20px;
+  }
+
+  .left {
+    display: flex;
+    flex-direction: row;
+  }
+        
+}
