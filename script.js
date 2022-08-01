@@ -13,5 +13,5 @@ document.onclick = function(e){
     toggle.onclick = function(){
     toggle.classList.toggle('active')
     navbarShow.classList.toggle('active')
-
     }
+
