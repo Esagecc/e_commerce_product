@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link
+
+  <link rel="stylesheet" href="lightbox.css">
+  <!-- <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
-/>
+/> -->
 
   <title>Frontend Mentor | E-commerce product page</title>
   <link rel="stylesheet" href="style.css">
@@ -34,26 +35,78 @@
         </div>
         
         <div class="right">
+          <div class="cart-sec btnCart">
             <img src="images/icon-cart.svg" alt="">
+              <p>
+                3
+              </p>
+          </div>
+            
             <img src="images/image-avatar.png" class="avatar" alt="">
+
+            <div class="cart hidden">
+              <div class="cart-header">Cart</div>
+              <div class="products-in-cart">
+                <div class="item">
+                  <img class="product-img" src="images/image-product-1-thumbnail.jpg" alt="product one">
+                  <div class="details">
+                    <div class="product-name">
+                      Autumn Limited Edition...
+                    </div>
+                    <div class="price-group">
+                      <div class="price">
+                        $125.00
+                      </div> x
+                      <div class="count">
+                        3
+                      </div>
+                      <div class="total-amount">
+                        $375.00
+                      </div>
+                    </div>
+                  </div>
+                  <img src="images/icon-delete.svg" id="btnDelete" alt="icon delete">
+
+                </div>
+              </div>
+                
+              <div class="msg-empty hidden">Your cart is empty.</div>
+              <div class="checkout">Checkout</div>
+            </div>
         </div>
     </div>
   </div>
-<section class="gallery">
-    <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="images/image-product-1.jpg" alt=""></div>
-      <div class="swiper-slide"><img src="images/image-product-2.jpg" alt=""></div>
-      <div class="swiper-slide"><img src="images/image-product-3.jpg" alt=""></div>
-      <div class="swiper-slide"><img src="images/image-product-4.jpg" alt=""></div>
-    </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-  </div>
-</section>
-
 
   <main>
+
+  <!-- Lightbox -->
+  <section class="lightbox">
+    <img class="product-hero" src="images/image-product-1.jpg" alt="">
+    <div class="previous arrow">
+      <img src="images/icon-previous.svg" alt="icon previous">
+    </div>
+    <div class="next arrow">
+      <img src="images/icon-next.svg" alt="icon next">
+    </div>
+    <div class="thumb-gallery">
+      <div class="pic active">
+        <img src="/images/image-product-1-thumbnail.jpg" alt="thumb-1">
+      </div>
+      <div class="pic">
+        <img src="/images/image-product-2-thumbnail.jpg" alt="thumb-2">
+      </div>
+      <div class="pic">
+        <img src="/images/image-product-3-thumbnail.jpg" alt="thumb-3">
+      </div>
+      <div class="pic">
+        <img src="/images/image-product-4-thumbnail.jpg" alt="thumb-4">
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="content">
 
     <h3>
       Sneaker Company
@@ -62,14 +115,13 @@
     <h6>
       Fall Limited Edition Sneakers
     </h6>
-    <p>
-      These low-profile sneakers are your perfect casual wear companion. Featuring a 
-      durable rubber outer sole, they’ll withstand everything the weather can offer.
+    <p class="description">
+      These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.
     </p>
     
     <div class="prices">
       <div class="total_price">
-        <h6>
+        <h6 class="final_price">
           $125.00
         </h6>
         <div class="discount">
@@ -80,20 +132,24 @@
         $250.00
       </div>
     </div>
-
-    <div class="amount">
-      <img src="images/icon-minus.svg" alt="">
-      <p>0</p>
-      <img src="images/icon-plus.svg" alt="">
+    
+    <div class="content-bottom">
+      <div class="amount">
+        <img src="images/icon-minus.svg" id="btnMinus" alt="">
+        <p class="counter">0</p>
+        <img src="images/icon-plus.svg" id="btnPlus" alt="">
+      </div>
+  
+      <button>
+        <img src="images/icon-cart.svg" class="cart-white" alt=""> Add to cart
+      </button>
     </div>
 
-    <button>
-      <img src="images/icon-cart.svg" class="cart-white" alt=""> Add to cart
-    </button>
+
   
   
-  </main>
-      
+  </section>
+  </main>   
 
 
 
@@ -104,7 +160,7 @@
 </div>
 
   <script src="script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
   <script>
      var swiper = new Swiper(".mySwiper", {
@@ -115,7 +171,7 @@
           prevEl: ".swiper-button-prev",
         },
       });
-  </script>
+  </script> -->
 
 </body>
 </html>
