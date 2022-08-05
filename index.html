@@ -37,7 +37,7 @@
         <div class="right">
           <div class="cart-sec btnCart">
             <img src="images/icon-cart.svg" alt="">
-              <p>
+              <p class="cart-count hidden">
                 3
               </p>
           </div>
@@ -47,7 +47,7 @@
             <div class="cart hidden">
               <div class="cart-header">Cart</div>
               <div class="products-in-cart">
-                <div class="item">
+                <!-- <div class="item">
                   <img class="product-img" src="images/image-product-1-thumbnail.jpg" alt="product one">
                   <div class="details">
                     <div class="product-name">
@@ -67,11 +67,11 @@
                   </div>
                   <img src="images/icon-delete.svg" id="btnDelete" alt="icon delete">
 
-                </div>
+                </div> -->
               </div>
                 
-              <div class="msg-empty hidden">Your cart is empty.</div>
-              <div class="checkout">Checkout</div>
+              <div class="msg-empty">Your cart is empty.</div>
+              <div class="checkout hidden">Checkout</div>
             </div>
         </div>
     </div>
@@ -136,7 +136,7 @@
     <div class="content-bottom">
       <div class="amount">
         <img src="images/icon-minus.svg" id="btnMinus" alt="">
-        <p class="counter">0</p>
+        <p class="counter">1</p>
         <img src="images/icon-plus.svg" id="btnPlus" alt="">
       </div>
   
@@ -151,7 +151,7 @@
   </section>
   </main>   
 
-
+  <div class="overlay hidden"></div>
 
   
   <div class="attribution">
@@ -160,18 +160,6 @@
 </div>
 
   <script src="script.js"></script>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-
-  <script>
-     var swiper = new Swiper(".mySwiper", {
-      loop: true,
-      zoom: true,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
-  </script> -->
 
 </body>
 </html>
