@@ -1,5 +1,6 @@
 .lightbox {
     position: relative;
+    max-width: rem;
 }
 
 .product-hero {

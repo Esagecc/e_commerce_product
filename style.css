@@ -16,7 +16,7 @@
     --gray-blue: hsl(220, 14%, 75%);
     --lt-gray-blue: hsl(223, 64%, 98%);
     --white: hsl(0, 0%, 100%);
-    --black: hsl(0, 0%, 0%);
+    --black: hsla(0, 0%, 0%, 0.671);
 }
 
 body {
@@ -42,6 +42,7 @@ body {
   width: 88%;
   padding: 15px 0;
   position: relative;
+  z-index: unset;
 }
   
 .avatar {
@@ -351,19 +352,6 @@ button {
     color: hsl(228, 45%, 44%); 
 }
 
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-
-  background-color: var(--black);
-}
-
-.hidden {
-  display: none;
-}
 
 @media (min-width:900px){
   .toggle {
