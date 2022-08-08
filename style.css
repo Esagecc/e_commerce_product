@@ -440,6 +440,7 @@ button {
     margin-left: 15px;
   }
    
+  /* LightBox  */
   .lightbox {
     width:72%;
   }
@@ -460,7 +461,6 @@ button {
   }
 
   .pic {
-    display: flex;
     width: 20%;
     height: 90px;
     overflow: hidden;
@@ -483,5 +483,8 @@ button {
   .pic img.active {
     opacity: 0.5;
   }
+
+  .lightbox .previous, .lightbox .next {
+    display: none;
   
 }
