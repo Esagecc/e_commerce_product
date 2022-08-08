@@ -8,19 +8,19 @@
 }
 
 .previous {
-    left: 4%;
-}
-
-.previous:hover {
     left: 3%;
 }
 
+.previous:hover {
+    left: 4%;
+}
+
 .next {
-    right: 4%;
+    right: 3%;
 }
 
 .next:hover {
-    right: 3%;
+    right: 4%;
 }
 
 .arrow {
@@ -36,4 +36,11 @@
     justify-content: center;
     cursor: pointer;
     transition: all 0.3s ease;
+}
+
+
+@media (min-width:700px) {
+    .arrow, .next, .previous {
+        visibility: hidden;
+    }
 }

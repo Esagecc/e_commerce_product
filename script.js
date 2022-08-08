@@ -14,6 +14,7 @@ document.onclick = function(e){
     navbarShow.classList.toggle('active')
     }
 
+//Cart 
 
 //Numerical Variables
 let productCounterValue = 1;
@@ -21,9 +22,6 @@ let productsInCart = 0;
 let price = 250.0;
 let discount = 0.5;
 
-
-
-//Cart 
 let cart = document.querySelector('.cart');
 let btnCart = document.querySelector('.btnCart')
 const btnAddToCard = document.querySelector('button');
@@ -139,7 +137,6 @@ btnPlus.addEventListener('click', productCounterPlus)
 btnMinus.addEventListener('click', productCounterMinus)
 
 function productCounterPlus() {
-    console.log(productCounterValue);
     setProductCounter(1);
 }
 
