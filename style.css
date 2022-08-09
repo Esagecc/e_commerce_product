@@ -56,7 +56,6 @@ body {
   border: 2px solid var(--orange);
 }
 
-
 .left {
   display: flex;
 }
@@ -93,7 +92,7 @@ body {
     
 .navbar-list  a:hover {
   text-decoration:underline;
-  color: rgb(57, 3, 158);
+  color: rgb(4, 3, 5);
 }
 
 /* animated xs */
@@ -390,7 +389,37 @@ button {
     height: 20px;
     flex-direction: row;
     overflow-x: visible;
-    padding-left: 35px;
+    padding-left: 40px;
+  }
+
+  .navbar-list a:nth-child(1)::after {
+    width: 82px;
+    transform: translateX(-72px);
+  }
+
+  .navbar-list a:nth-child(2)::after {
+    width: 50px;
+    transform: translateX(-45px);
+  }
+
+  .navbar-list a::after {
+    position: absolute;
+    content: '';
+    height: 80px;
+    transform: translateX(-50px);
+    width: 60px; 
+    border-bottom: solid 3px var(--orange);
+    transition: .5s ease-in-out;	
+    opacity: 0;
+  }
+  
+.navbar-list a:hover {
+  text-decoration: none;
+}
+
+  .navbar-list a:hover:after {
+    text-decoration: none;
+    opacity: 1;
   }
 
   .navbar-list a {
