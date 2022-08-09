@@ -18,15 +18,13 @@
     max-width:34rem;
   }
   
-.next {
+.lightbox .next {
   display: flex;
-  right: 0;
   transform: translateX(50%) ;
 }
 
-.previous {
+.lightbox .previous {
   display: flex;
-  left: 0;
   transform: translateX(-50%);
 }
 
@@ -45,7 +43,12 @@
     filter: brightness(300%);
   }
 
+  .btnClose img:hover {
+    color: orange;
+  }
+
   .hidden {
     display: none;
   }
   
+

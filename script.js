@@ -165,8 +165,6 @@ const lightbox = document.querySelector('.lightbox')
 let lightboxGallery;
 let lightboxHero;
 
-
-
 btnNext.addEventListener('click', handleBtnClickNext)
 btnPrevious.addEventListener('click', handleBtnClickPrevious)
 heroImg.addEventListener('click', onHeroImgClick)
@@ -233,9 +231,13 @@ function onHeroImgClick() {
                 img.addEventListener('click', onThumbClickLightbox);
             });
             const btnOverlayNext = overlay.querySelector('.next');
+            
             const btnOverlayPrevious = overlay.querySelector('.previous');
             btnOverlayNext.addEventListener('click', handleBtnClickNextOverlay); 
             btnOverlayPrevious.addEventListener('click', handleBtnClickPreviousOverlay); 
+
+            btnOverlayNext.style.visibility = 'visible';
+            btnOverlayPrevious.style.visibility = 'visible';
         }
         overlay.classList.remove('hidden');
     }

@@ -1,6 +1,5 @@
 .lightbox {
     position: relative;
-    max-width: rem;
 }
 
 .product-hero {
@@ -8,19 +7,19 @@
 }
 
 .previous {
-    left: 3%;
+    left: 7%;
 }
 
 .previous:hover {
-    left: 4%;
+    left: 8%;
 }
 
 .next {
-    right: 3%;
+    right: 7%;
 }
 
 .next:hover {
-    right: 4%;
+    right: 8%;
 }
 
 .arrow {
@@ -39,7 +38,7 @@
 }
 
 
-@media (min-width:700px) {
+@media (min-width:1440px) {
     .arrow, .next, .previous {
         visibility: hidden;
     }

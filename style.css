@@ -449,10 +449,6 @@ button {
     border-radius: 15px;
   }
 
-  .previous, .next {
-    display: none;
-  }
-
   .thumb-gallery {
     display: flex;
     align-items: center;
@@ -484,8 +480,4 @@ button {
     opacity: 0.5;
   }
 
-  .lightbox .previous, 
-  .lightbox .next {
-    display: flex;
-  }
 }
