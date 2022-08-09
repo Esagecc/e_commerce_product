@@ -160,6 +160,7 @@ body {
 .cart-sec img {
     filter: contrast(4);
 }
+
 .cart-sec p {
     position: absolute;
     top: -25%;

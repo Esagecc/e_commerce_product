@@ -14,13 +14,13 @@
     z-index: 22;
   }
 
-  .lightbox {
-    max-width:34rem;
-  }
+.lightbox {
+  max-width:34rem;
+}
   
 .lightbox .next {
   display: flex;
-  transform: translateX(50%) ;
+  transform: translateX(50%);
 }
 
 .lightbox .previous {
@@ -32,7 +32,12 @@
   top: 40%;
 }
 
-  .btnClose {
+.previous img:hover,
+.next img:hover {
+  filter: invert(63%) sepia(86%) saturate(1274%) hue-rotate(357deg) brightness(99%) contrast(104%);
+}
+
+.btnClose {
     width: 34rem;
     text-align: end;
     padding: 1rem;
@@ -44,7 +49,7 @@
   }
 
   .btnClose img:hover {
-    color: orange;
+    filter: invert(63%) sepia(86%) saturate(1274%) hue-rotate(357deg) brightness(99%) contrast(104%);
   }
 
   .hidden {

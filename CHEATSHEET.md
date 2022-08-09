@@ -38,48 +38,93 @@ have a section will main image, arrows and seperate div of thumb gallery
     width:72%; ***it is set the amount of space within section***
   }
 
-  .product-hero {
+.product-hero {
     border-radius: 15px;
   }
 
-  .previous, .next {
+.previous, .next {
     display: none; ***hidden the arrows***
   }
 
-  .thumb-gallery {
+.thumb-gallery {
     display: flex; ***make row of thumbgallery pics***
     align-items: center;
     justify-content: space-between;***spaces between pictures***
     margin-top: 1.5rem;
   }
 
-  .pic { ***editing the pictures in the thumbgallery***
+.pic { ***editing the pictures in the thumbgallery***
     width: 20%; 
     height: 90px;
     overflow: hidden;
     border-radius: 0.8rem;
   }
   
-  .pic img {
+.pic img {
     width: 100%;
   }
 
-  .pic img:hover { ***when mouse is hovering over***
+.pic img:hover { ***when mouse is hovering over***
     opacity: 0.75;
   }
 
-  .pic.active { ***when pictures are set in hero image***
+.pic.active { ***when pictures are set in hero image***
     border: 2px solid var(--orange);
     opacity: 0.5;
   }
 
-  .pic img.active { ***when image is set in hero image***
+.pic img.active { ***when image is set in hero image***
     opacity: 0.5;
   }
-  
+
+.lightbox {
+    position: relative;
+}
+
+.product-hero {
+    width: 100%;
+}
+
+.previous {
+    left: 7%;
+}
+
+.previous:hover {
+    left: 8%;
+}
+
+.next {
+    right: 7%;
+}
+
+.next:hover {
+    right: 8%;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--white);
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+@media (min-width:1440px) {
+    .arrow, .next, .previous {
+        visibility: hidden;
+    }
+}
+
   ***JavaScript section.***
 
-  //Gallery
+//Gallery
 const gallery = document.querySelectorAll('.pic') ***all pics in thumb gallery ***
 const heroImg = document.querySelector('.product-hero')***main picture***
 const btnNext = document.querySelector('.next')***right arrow***
@@ -170,7 +215,9 @@ function onHeroImgClick() {
             const btnOverlayPrevious = overlay.querySelector('.previous');
             btnOverlayNext.addEventListener('click', handleBtnClickNextOverlay); 
             btnOverlayPrevious.addEventListener('click', handleBtnClickPreviousOverlay); 
-***to move next or previous pictures within the overlay***
+***to move next or previous pictures within the overlay & it is visible***
+            btnOverlayNext.style.visibility = 'visible';
+            btnOverlayPrevious.style.visibility = 'visible';
         }
         overlay.classList.remove('hidden'); 
     }
