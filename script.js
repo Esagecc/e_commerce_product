@@ -237,7 +237,9 @@ function onHeroImgClick() {
             btnOverlayPrevious.addEventListener('click', handleBtnClickPreviousOverlay); 
 
             btnOverlayNext.style.visibility = 'visible';
+            btnOverlayNext.style.right = 0;
             btnOverlayPrevious.style.visibility = 'visible';
+            btnOverlayPrevious.style.left = 0;
         }
         overlay.classList.remove('hidden');
     }

@@ -399,16 +399,16 @@ button {
 
   .navbar-list a:nth-child(2)::after {
     width: 50px;
-    transform: translateX(-45px);
+    transform: translateX(-40px);
   }
 
   .navbar-list a::after {
     position: absolute;
     content: '';
     height: 80px;
-    transform: translateX(-50px);
+    transform: translateX(-52px);
     width: 60px; 
-    border-bottom: solid 3px var(--orange);
+    border-bottom: solid 4px var(--orange);
     transition: .5s ease-in-out;	
     opacity: 0;
   }
